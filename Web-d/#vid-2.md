@@ -60,3 +60,67 @@ In building a webpage, think of HTML, CSS, and JavaScript as different parts of 
 2. script.js
 3. style.css
 
+#### Some Important extensions in VScode:
+- VScode icons.
+- jellyfish themes, github theme etc, `use any one`.
+- Prettier
+- ES7
+- Live Preview(To see your code in website)
+
+### Getting started with HTML
+
+Now that your file is ready, copy the following code and paste it into your "index.html" file.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello World
+</body>
+</html>
+```
+### Going Live using the "live server" extension
+To see your webpage in action, locate the "Go Live" icon at the bottom-right corner of your VS Code window and click it. If you don't see this icon, you probably haven't installed the Live Server extension, which we discussed in a previous tutorial.
+<img src="https://raw.githubusercontent.com/microsoft/vscode-livepreview/main/img/browser-demo.gif">
+
+#### Embedded Preview
+A preview is available in-editor for the files hosted by the server.<br>
+
+<img src="https://raw.githubusercontent.com/microsoft/vscode-livepreview/main/img/browser-demo.gif">
+
+The simple embedded browser features the following:
+
+- Page history tracking
+- URL bar for address-based navigation
+- Expandable menu, allowing users to:
+  - Preview the current page in browser
+  - Perform a page search
+      - Tip: You can also use CTRL+F to open the find box and Enter to go to the next result
+  - Open the editor's webview DevTools<br>
+  
+<img src="https://raw.githubusercontent.com/microsoft/vscode-livepreview/main/img/find-demo.gif">
+
+### Style.css
+
+```css
+body{
+    backgroung-color: red;
+    )
+```
+`You will not get any red color`.
+<br>
+`Reason`:We haven't linked 
+<br>
+### You can add this to link:
+```html
+<link rel = "stylesheet" href="style.css">
+```
+### How to change text color
+
+<script src="https://codepen.io/web-dot-dev/pen/oNymmWw></script>
+
