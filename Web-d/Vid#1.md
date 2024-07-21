@@ -1,4 +1,4 @@
-## Installing Vs code 
+## Installing Vs code
 ### Installing Visual Studio Code (VS Code) on macOS and Windows
 
 ### For macOS
