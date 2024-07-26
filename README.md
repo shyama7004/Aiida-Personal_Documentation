@@ -46,7 +46,7 @@
   - Fetch API and AJAX
 
 **React**
-- **[React Official Documentation](https://reactjs.org/docs/getting-started.html)**: The best and most updated resource for learning React, straight from the creators of React.
+- **[React Official Documentation](https://react.dev/learn)**: The best and most updated resource for learning React, straight from the creators of React.
 
 #### Week 3: React
 - **React Basics (4 days)**
