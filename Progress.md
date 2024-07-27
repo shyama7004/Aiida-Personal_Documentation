@@ -1,6 +1,15 @@
 ## Html, CSS & JavaScript
 - Day-1 :[Getting started with HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
 - Day-2 :
-  - [;;;]
-  - [;;;]
-  - [;;;]
+  - [What's in the head? Metadata in HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+  - [HTML text fundamentals](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+  - [Creating hyperlinks](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+  - [Advanced text formatting](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+  - [Document and website structure](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+    - [main](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)
+    - [article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)
+    - [section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
+    - [aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)
+    - [header](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+    - [nav](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav)
+    - [footer](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
