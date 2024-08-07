@@ -1,4 +1,4 @@
-<div align="center"><h1>AiiDA Contibution</h1></div>
+<div align="center"><h1>AiiDA Contribution</h1></div>
 
 ### Web Development Topics
 
@@ -7,16 +7,27 @@
 
 #### Week 1: HTML & CSS
 - **HTML (3 days)**
-  - Basic Structure of HTML
-  - HTML Elements and Attributes
-  - Headings, Paragraphs, and Text Formatting
-  - Lists (Ordered, Unordered)
-  - Links and Images
-  - Tables
-  - Forms and Input Elements
-  - HTML5 Semantic Elements (header, footer, article, section, etc.)
-  - Multimedia Elements (audio, video)
-  - HTML5 APIs (Drag and Drop, Local Storage)
+  - [Introduction to HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML)
+  - [Getting started with HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+  - [What's in the head? Metadata in HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+  - [HTML text fundamentals](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+  - [Creating hyperlinks](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
+  - [Advanced text formatting](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
+  - [Document and website structure](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
+  - Debugging HTML
+  - Marking up a letter
+  - Structuring a page of content
+  - Multimedia and embedding
+  - Images in HTML
+  - Video and audio content
+  - From object to iframe — other embedding technologies
+  - Adding vector graphics to the web
+  - Responsive images
+  - Mozilla splash page
+  - HTML tables
+  - HTML table basics
+  - HTML table advanced features and accessibility
+  - Structuring planet data
 
 - **CSS (4 days)**
   - CSS Syntax and Selectors
@@ -231,9 +242,7 @@
 #### Week 2: Team Collaboration
 - **Team Collaboration (4 days)**
   - Agile Methodologies (Understanding Agile practices like Scrum or Kanban)
-  - Communication Tools (Using tools like Slack,
-
- Microsoft Teams for team communication)
+  - Communication Tools (Using tools like Slack, Microsoft Teams for team communication)
 
 **NextJS (Not Now)**
 - **[Next.js Official Documentation](https://nextjs.org/docs)**: The most comprehensive and up-to-date resource for learning Next.js.
@@ -254,5 +263,3 @@
   - Environment Variables
   - Internationalization (i18n)
   - Incremental Static Regeneration (ISR)
-
-This structure should provide a clear path for your learning and development in web development, backend, AIIDA-specific knowledge, and collaboration tools.
