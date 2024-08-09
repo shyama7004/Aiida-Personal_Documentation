@@ -47,155 +47,98 @@ This is the primary resource for understanding and mastering the AiiDA framework
      - Explore the AiiDA plugin registry to find existing plugins relevant to your work.
      - Understand how to install, configure, and use these plugins within your workflows.
 
+The sequence of the topics is logically structured based on the typical workflow of setting up and using PostgreSQL, especially for a beginner:
+
+### 1. **Installation and Configuration**:
+   - **[Installation from Binaries](https://www.postgresql.org/docs/current/installation.html)**: Setting up PostgreSQL.
+   - **[Server Configuration](https://www.postgresql.org/docs/current/runtime-config.html)**: Configuring your server for optimal performance. 
+
+### 2. **SQL Language Basics**:
+   - **[Data Definition Language (DDL)](https://www.postgresql.org/docs/current/sql-createtable.html)**: Creating tables, indexes, views.
+   - **[Data Manipulation Language (DML)](https://www.postgresql.org/docs/current/sql-insert.html)**: Inserting, updating, deleting data.
+   - **[Queries](https://www.postgresql.org/docs/current/tutorial-join.html)**: Selecting and retrieving data.
+
+### 3. **Database Design**:
+   - **[Indexes](https://www.postgresql.org/docs/current/indexes.html)**: Efficiently accessing data.
+   - **[Performance Optimization](https://www.postgresql.org/docs/current/performance-tips.html)**: Techniques to improve query speed.
+
+### 4. **Transactions and Concurrency**:
+   - **[Transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html)**: Ensuring reliable transactions.
+   - **[Concurrency Control](https://www.postgresql.org/docs/current/mvcc.html)**: Handling concurrent data access.
+
+### 5. **Backup and Restore**:
+   - **[Backup and Restore](https://www.postgresql.org/docs/current/backup.html)**: Essential for data recovery.
 
 ### Python Basics (4 days)
-- **[Real Python](https://realpython.com/)**: A comprehensive resource for learning Python programming, suitable for beginners and advanced users alike.
+- **[Real Python](https://realpython.com/)**: A comprehensive resource for learning Python programming.
 
 #### 1. **Basic Syntax and Data Structures**
-   - **Introduction to Python Syntax**
-     - Learn the fundamental syntax rules of Python, including indentation, comments, and basic input/output functions (`print()`, `input()`).
-     - Understand the differences between Python 2 and Python 3, and why Python 3 is recommended.
-
-   - **Data Types and Variables**
-     - Explore the different data types in Python: integers, floats, strings, and booleans.
-     - Learn how to declare and use variables, including naming conventions and dynamic typing.
-
-   - **Lists**
-     - Learn how to create, access, modify, and iterate over lists.
-     - Understand list methods like `append()`, `remove()`, `pop()`, and `sort()`.
-     - Explore list comprehensions for concise and efficient list operations.
-
-   - **Dictionaries**
-     - Understand how to create dictionaries with key-value pairs.
-     - Learn to access, modify, and iterate over dictionary items.
-     - Explore dictionary methods like `get()`, `keys()`, `values()`, and `items()`.
-
-   - **Sets**
-     - Learn how to create and use sets, focusing on their unique element property.
-     - Understand set operations such as union, intersection, and difference.
-     - Explore set methods like `add()`, `remove()`, `union()`, and `intersection()`.
-
-   - **Tuples**
-     - Understand the immutability of tuples and how to create them.
-     - Learn how to access and unpack tuple elements.
-     - Explore the use of tuples in functions and data structures.
+   - **[Introduction to Python Syntax](https://docs.python.org/3/reference/lexical_analysis.html)**: Learn the fundamental syntax rules of Python.
+   - **[Data Types and Variables](https://realpython.com/python-data-types/)**: Explore different data types in Python and how to use variables.
+   - **[Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)**: Creating, accessing, and modifying lists, and understanding list comprehensions.
+   - **[Dictionaries](https://realpython.com/python-dicts/)**: Creating and using dictionaries in Python.
+   - **[Sets](https://realpython.com/python-sets/)**: Learn about sets and how to use them effectively.
+   - **[Tuples](https://realpython.com/python-tuples/)**: Understanding tuples and their usage.
 
 #### 2. **Control Structures**
-   - **Conditional Statements**
-     - Learn to use `if`, `elif`, and `else` statements to control the flow of your program.
-     - Understand nested conditions and the importance of logical operators (`and`, `or`, `not`).
-
-   - **Loops**
-     - **For Loops**: Learn how to iterate over sequences like lists, dictionaries, and strings using `for` loops.
-     - **While Loops**: Understand how to use `while` loops for repeated execution based on a condition.
-     - Explore loop control statements like `break`, `continue`, and `else` with loops.
-
-   - **Exception Handling**
-     - Learn the importance of handling errors gracefully using `try-except` blocks.
-     - Understand how to raise exceptions with `raise`, and use `finally` for cleanup operations.
-     - Explore specific exceptions and how to handle them (e.g., `ValueError`, `TypeError`, `IndexError`).
+   - **[Conditional Statements](https://realpython.com/python-conditional-statements/)**: Using `if`, `elif`, and `else` for conditional logic.
+   - **[Loops](https://docs.python.org/3/tutorial/controlflow.html#for-statements)**: Understanding `for` and `while` loops in Python.
+   - **[Exception Handling](https://realpython.com/python-exceptions/)**: Using `try`, `except`, and `finally` to handle errors effectively.
 
 #### 3. **Functions and Modules**
-   - **Defining Functions**
-     - Learn how to define functions using the `def` keyword.
-     - Understand function arguments, return values, and default parameters.
-     - Explore the concept of recursive functions and their use cases.
-
-   - **Lambda Functions**
-     - Understand what lambda functions are and how to use them for small, anonymous functions.
-     - Learn common use cases of lambda functions, especially with functions like `map()`, `filter()`, and `reduce()`.
-
-   - **Modules and Packages**
-     - Learn how to import and use standard Python modules like `math`, `os`, and `sys`.
-     - Understand how to create your own modules and import them into other Python files.
-     - Explore the Python Package Index (PyPI) and how to install external packages using `pip`.
-
-   - **Scopes and Namespaces**
-     - Understand the concept of local, global, and nonlocal scopes in Python.
-     - Learn how Python resolves variable names using the LEGB (Local, Enclosing, Global, Built-in) rule.
-     - Explore how to use the `global` and `nonlocal` keywords to modify variables in different scopes.
+   - **[Defining Functions](https://realpython.com/defining-your-own-python-function/)**: How to define and use functions in Python.
+   - **[Lambda Functions](https://realpython.com/python-lambda/)**: Introduction to lambda functions for concise function definitions.
+   - **[Modules and Packages](https://realpython.com/python-modules-packages/)**: Working with modules and packages in Python.
+   - **[Scopes and Namespaces](https://realpython.com/python-scope-legb-rule/)**: Understanding variable scopes and namespaces in Python.
 
 #### 4. **Object-Oriented Programming (OOP)**
-   - **Introduction to OOP**
-     - Understand the core principles of OOP: Encapsulation, Inheritance, Polymorphism, and Abstraction.
-     - Learn how OOP is implemented in Python and why it is beneficial for structuring large codebases.
-
-   - **Classes and Objects**
-     - Learn how to define classes using the `class` keyword and instantiate objects from them.
-     - Understand the `__init__()` method and its role in initializing object attributes.
-     - Explore how to add methods to a class and access attributes and methods from an object.
-
-   - **Inheritance**
-     - Understand how to create subclasses that inherit attributes and methods from a parent class.
-     - Learn how to override methods in a subclass and use the `super()` function to call parent class methods.
-     - Explore the concept of multiple inheritance and the method resolution order (MRO).
-
-   - **Polymorphism**
-     - Learn how polymorphism allows different classes to be treated as instances of the same class through method overriding.
-     - Explore how to use polymorphism in functions and class methods to work with objects of different classes.
-
-   - **Encapsulation and Access Modifiers**
-     - Understand the concept of encapsulation and how to protect data using private and protected attributes.
-     - Learn how to implement getter and setter methods for controlled access to class attributes.
+   - **[Introduction to OOP](https://realpython.com/python3-object-oriented-programming/)**: Core principles of Object-Oriented Programming in Python.
+   - **[Classes and Objects](https://realpython.com/python-classes/)**: Creating and using classes and objects in Python.
+   - **[Inheritance](https://docs.python.org/3/tutorial/classes.html#inheritance)**: Using inheritance to extend classes in Python.
+   - **[Polymorphism](https://docs.python.org/3/glossary.html#term-polymorphism)**: Applying polymorphism in Python programming.
+   - **[Encapsulation and Access Modifiers](https://docs.python.org/3/tutorial/classes.html#private-variables)**: Implementing encapsulation and access control in Python classes.
 
 #### 5. **Error Handling**
-   - **Using `try-except` Blocks**
-     - Learn how to wrap potentially error-prone code in `try` blocks and handle exceptions with `except`.
-     - Understand how to handle multiple exceptions and provide custom error messages.
-
-   - **Raising Exceptions**
-     - Learn how to raise exceptions manually using the `raise` keyword.
-     - Understand when to use custom exceptions and how to define them.
-
-   - **Finally and Cleanup Actions**
-     - Explore the use of the `finally` block to execute cleanup actions, such as closing files or releasing resources, regardless of whether an exception occurred.
-
-   - **Best Practices for Error Handling**
-     - Learn best practices for writing robust code, including catching specific exceptions, avoiding bare `except` statements, and logging errors for debugging purposes.
-
+   - **[Using `try-except` Blocks](https://realpython.com/python-exceptions/)**: Handling errors with `try` and `except`.
+   - **[Raising Exceptions](https://docs.python.org/3/tutorial/errors.html#raising-exceptions)**: Manually raising exceptions in Python.
+   - **[Finally and Cleanup Actions](https://docs.python.org/3/tutorial/errors.html#defining-clean-up-actions)**: Using `finally` to ensure cleanup actions.
+   - **[Best Practices for Error Handling](https://docs.python.org/3/tutorial/errors.html#handling-exceptions)**: foundation for contributing to projects like AiiDA.
 
 ## Scientific Computing
 
-### Scientific Computing (7 days)
-- **[SciPy](https://www.scipy.org/)**: An essential library for performing scientific and technical computing in Python.
-  
-  #### 1. **Understanding Scientific Workflows**
-     - **Introduction to Scientific Workflows**
-       - Learn what scientific workflows are and how they are used to manage and automate scientific computations.
-       - Understand the importance of reproducibility and transparency in scientific research.
-       - Explore examples of scientific workflows in computational research.
+I apologize for the confusion earlier. Here are updated, correctly working links to resources that will help you prepare for contributing to AiiDA using SciPy:
 
-     - **Components of a Scientific Workflow**
-       - Learn about the different components of a scientific workflow, such as data inputs, computational steps, and result outputs.
-       - Study how workflows can be broken down into tasks and how these tasks are interconnected.
+### 1. **Basic SciPy Operations**
+   - **[Mathematical Functions](https://docs.python.org/3/library/math.html)**: Learn how to use SciPy's special mathematical functions.
+   - **[Linear Algebra](hhttps://www.geeksforgeeks.org/scipy-linear-algebra-scipy-linalg/)**: Understand matrix operations, decompositions, and linear algebra functions in SciPy.
+   - **[Integration](https://www.geeksforgeeks.org/scipy-integration/)**: Familiarize yourself with numerical integration methods in SciPy, including ODE solvers.
+   - **[Optimization](https://www.geeksforgeeks.org/optimization-in-scipy/)**: Study how to use SciPy’s optimization techniques, including minimization, curve fitting, and root finding.
+   - **[Interpolation](https://www.geeksforgeeks.org/scipy-interpolation/)**: Learn about different interpolation methods in SciPy and their applications to data.
 
-     - **Workflow Management Tools**
-       - Introduction to workflow management systems (WMS) like AiiDA.
-       - Learn how AiiDA manages complex workflows, from task scheduling to data provenance tracking.
-       - Explore the advantages of using a WMS for large-scale scientific computations.
+### 2. **Data Processing and Analysis**
+   - **[Signal Processing](https://docs.scipy.org/doc/scipy/tutorial/signal.html)**: Explore SciPy’s signal processing tools, such as filtering, Fourier transforms, and convolution operations.
+   - **[Statistical Analysis](https://www.geeksforgeeks.org/scipy-stats/)**: Understand SciPy’s statistical functions, including hypothesis testing, probability distributions, and statistical analysis.
+   - **[Handling Large Datasets](https://www.geeksforgeeks.org/handling-large-datasets-in-python/)**: Learn how to efficiently manipulate large datasets using SciPy along with NumPy.
 
-  #### 2. **Utilizing SciPy for Scientific Calculations and Data Processing**
-     - **Basic Operations with SciPy**
-       - Learn how to perform basic operations in SciPy, including mathematical functions, linear algebra, and integration.
-       - Explore the use of `scipy.optimize` for optimization problems, `scipy.interpolate` for interpolation, and `scipy.integrate` for numerical integration.
-       - Study how SciPy can be used to solve ordinary differential equations (ODEs) and perform Fourier transforms.
+### 3. **Advanced SciPy Modules**
+   - **[Sparse Matrices](https://docs.scipy.org/doc/scipy/reference/sparse.html)**: Work with sparse matrices in SciPy and understand their applications in large-scale computations.
+   - **[Spatial Data Analysis](https://docs.scipy.org/doc/scipy/reference/spatial.html)**: Study how to handle spatial data, perform distance computations, and use KD-trees with SciPy’s spatial module.
+   - **[Image Processing](https://docs.scipy.org/doc/scipy/reference/ndimage.html)**: Learn about image processing techniques using SciPy’s ndimage module, including filtering and morphological operations.
 
-     - **Data Processing and Analysis**
-       - Learn how to use SciPy for data processing tasks such as filtering, smoothing, and fitting data to models.
-       - Explore the use of `scipy.stats` for statistical analysis, including hypothesis testing and probability distributions.
-       - Understand how to handle large datasets efficiently with SciPy and NumPy.
+### 4. **Workflow Integration**
+   - **[Understanding Workflows](https://aiida.readthedocs.io/projects/aiida-core/en/latest/)**: Learn the concepts of scientific workflows and how to design them.
+   - **[Workflow Management Systems](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/workflows/)**: Get familiar with AiiDA’s workflow management, task scheduling, data provenance, and automation.
+   - **[Integration with AiiDA](https://aiida.readthedocs.io/projects/aiida-core/en/latest/)**: Understand how to integrate SciPy computations within AiiDA workflows, ensuring reproducibility and data provenance.
 
-     - **Advanced SciPy Modules**
-       - Dive deeper into advanced SciPy modules like `scipy.ndimage` for image processing and `scipy.spatial` for spatial data analysis.
-       - Learn how to work with sparse matrices using `scipy.sparse` and perform scientific computations on them.
+### 5. **Practical Applications and Case Studies**
+   - **[Practical Examples](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/index.html)**: Work on real-world examples where SciPy and AiiDA are used together, such as setting up simulations or optimizing scientific experiments.
+   - **[AiiDA Plugins](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/plugins.html)**: Learn how to write and use AiiDA plugins that require SciPy for their calculations.
 
-     - **Practical Applications in Scientific Computing**
-       - Apply the concepts learned by working on practical examples and projects, such as data analysis pipelines or simulation models.
-       - Explore case studies where SciPy has been used in scientific research to solve real-world problems.
+### 6. **Documentation and Best Practices**
+   - **[SciPy Documentation](https://docs.scipy.org/doc/scipy/)**: Get familiar with the official SciPy documentation for quick reference on functions and their usage.
+   - **[AiiDA Contribution Guidelines](https://aiida.readthedocs.io/projects/aiida-core/en/latest/contributing/index.html)**: Study AiiDA’s contribution guidelines and documentation to ensure your work aligns with the project’s standards.
 
-     - **Integration with AiiDA**
-       - Understand how to integrate SciPy-based calculations within AiiDA workflows.
-       - Learn how to use AiiDA to automate and manage SciPy computations, ensuring data provenance and reproducibility.
+These links should now correctly direct you to the resources you need.
 
 
 ## Version Control
@@ -226,7 +169,7 @@ This is the primary resource for understanding and mastering the AiiDA framework
      - Learn why Agile is favored in software development, focusing on flexibility, customer collaboration, and iterative progress.
    
    - **Scrum Framework**
-     - **Roles**: Learn about the key roles in Scrum, including Product Owner, Scrum Master, and Development Team.
+     - [Roles](https://www.atlassian.com/agile/scrum/roles): Learn about the key roles in Scrum, including Product Owner, Scrum Master, and Development Team.
      - **Artifacts**: Study the essential artifacts in Scrum, such as the Product Backlog, Sprint Backlog, and Increment.
      - **Events**: Understand Scrum events like Sprint Planning, Daily Standups, Sprint Review, and Sprint Retrospective.
      - **Sprint Cycles**: Learn how to plan and execute work in short, iterative cycles called Sprints.
