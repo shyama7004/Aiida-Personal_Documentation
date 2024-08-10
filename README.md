@@ -2,143 +2,92 @@
 
 ## AiiDA-Specific Knowledge
 
-### AiiDA Framework (7 days)
-- **[AiiDA Official Documentation](https://aiida.readthedocs.io/)**: The most comprehensive and authoritative guide for learning and using the AiiDA framework.
- 
-### AiiDA Framework (7 days)
+Here's a table with essential topics to focus on, including links to the official AiiDA documentation:
 
-**AiiDA Official Documentation:**  
-This is the primary resource for understanding and mastering the AiiDA framework. It includes comprehensive guides, tutorials, and API references.
+### 1. **Processes**
+| **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
+|------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Concepts**     | - [Introduction](https://aiida.readthedocs.io/projects/aiida-core/en/latest/intro/index.html)<br>- [Quick Installation](https://aiida.readthedocs.io/projects/aiida-core/en/latest/installation/guide_quick.html)<br> - [Complete Installation](https://aiida.readthedocs.io/projects/aiida-core/en/latest/installation/guide_complete.html)<br>- [Docker](https://aiida.readthedocs.io/projects/aiida-core/en/latest/installation/docker.html)<br>- [Troubleshooting](https://aiida.readthedocs.io/projects/aiida-core/en/latest/installation/troubleshooting.html)<br> - [Basic Tutorial](https://aiida.readthedocs.io/projects/aiida-core/en/latest/tutorials/basic.html#tutorial-basic)<br>- [Process types](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/concepts.html#types) <br> - [Process state](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/concepts.html#states) <br> - [Process exit codes](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/concepts.html#exit-codes) <br> - [Process lifetime](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/concepts.html#lifetime) | [Processes Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/index.html) |
+| **Usage**        | - [Defining processes](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/usage.html#defining-processes) <br> - [Launching processes](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/usage.html#launching-processes) <br> - [Monitoring processes](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/usage.html#monitoring-processes) <br> - [Manipulating processes](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/usage.html#manipulating-processes) | [Processes Usage](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/usage.html) |
+| **Process Functions** | - [Function signatures](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html#function-signatures) <br> - [Type validation](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html#type-validation) <br> - [Docstring parsing](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html#docstring-parsing) <br> - [Return values](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html#return-values) <br> - [Exit codes](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html#exit-codes) | [Process Functions](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html) |
+| **Provenance**   | - General understanding of provenance                                                                          | [Provenance Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/index.html) |
 
-1. **Installation and Setup**
-   - **Setting up an AiiDA Environment:**  
-     - Learn how to install AiiDA on your local machine or a server.
-     - Understand the necessary dependencies (like PostgreSQL, RabbitMQ) and how to configure them.
-     - Explore virtual environments and package management with `pip` for AiiDA.
-   - **Configuration:**  
-     - Set up the `aiida` command-line interface (CLI).
-     - Configure AiiDA to connect with external databases and message brokers.
-     - Understand the purpose and setup of profiles in AiiDA.
+### 2. **Calculations**
+| **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
+|------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Concepts**     | - [Calculation functions](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/concepts.html#calculation-functions) <br> - [Calculation jobs](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/concepts.html#calculation-jobs) | [Calculations Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/index.html) |
+| **Usage**        | - [Practical experience with calculation functions](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/usage.html#calculation-functions) <br> - [Practical experience with calculation jobs](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/usage.html#calculation-jobs) | [Calculations Usage](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/usage.html) |
 
-2. **Managing Workflows**
-   - **Creating Workflows:**  
-     - Understand the basics of creating workflows using AiiDA’s `WorkChain` and `CalcJob` classes.
-     - Learn how to define input parameters, manage computational tasks, and handle outputs.
-   - **Submitting Workflows:**  
-     - Explore the process of submitting workflows to AiiDA's daemon for execution.
-     - Learn about the different types of `Processes` in AiiDA.
-   - **Monitoring and Retrieving Results:**  
-     - Understand how to monitor the progress of running workflows using the `verdi` command-line tools.
-     - Learn how to query and retrieve the results of completed workflows.
+### 3. **Workflows**
+| **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
+|------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Concepts**     | - [Work functions](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/workflows/concepts.html#work-functions) <br> - [Work chains](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/workflows/concepts.html#work-chains) | [Workflows Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/workflows/index.html) |
+| **Usage**        | - [Creating and managing workflows](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/workflows/usage.html) | [Workflows Usage](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/workflows/usage.html) |
 
-3. **Data Provenance**
-   - **Tracking Data Provenance:**  
-     - Learn how AiiDA automatically tracks the full provenance of all data within the platform.
-     - Understand how to use AiiDA’s querying capabilities to explore data lineage.
-   - **Storing and Handling Data:**  
-     - Explore how AiiDA stores data in the database and how to manage it efficiently.
-     - Learn about the different storage backends and how they integrate with AiiDA.
+### 4. **Provenance**
+| **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
+|------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Concepts**     | - [Nodes and links](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/concepts.html#nodes-and-links) <br> - [Data provenance and logical provenance](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/concepts.html#data-provenance-and-logical-provenance) | [Provenance Concepts](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/concepts.html) |
+| **Implementation** | - [Graph nodes](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/implementation.html#graph-nodes) <br> - [Graph links](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/implementation.html#graph-links) | [Provenance Implementation](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/implementation.html) |
+| **Consistency**  | - [Traversal rules](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/consistency.html#traversal-rules) <br> - [Caching and hashing](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/consistency.html#caching-and-hashing) | [Provenance Consistency](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/consistency.html) |
 
-4. **Plugins**
-   - **Developing Plugins:**  
-     - Learn the basics of creating AiiDA plugins for custom workflows, data types, and calculation types.
-     - Understand the structure of an AiiDA plugin and how to extend the core functionality.
-   - **Using Existing Plugins:**  
-     - Explore the AiiDA plugin registry to find existing plugins relevant to your work.
-     - Understand how to install, configure, and use these plugins within your workflows.
+### 5. **Daemon**
+| **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
+|------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **General Understanding** | - [Managing background tasks](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/daemon/index.html#managing-background-tasks) <br> - [Running calculations](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/daemon/index.html#running-calculations) | [Daemon Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/daemon/index.html) |
 
-The sequence of the topics is logically structured based on the typical workflow of setting up and using PostgreSQL, especially for a beginner:
+### 6. **Data Types**
+| **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
+|------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **General Understanding** | - [Different data types in AiiDA](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/data_types/index.html) <br> - [Handling and manipulating data](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/data_types/usage.html) | [Data Types Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/data_types/index.html) |
 
-### 1. **Installation and Configuration**:
-   - **[Installation from Binaries](https://www.postgresql.org/docs/current/installation.html)**: Setting up PostgreSQL.
-   - **[Server Configuration](https://www.postgresql.org/docs/current/runtime-config.html)**: Configuring your server for optimal performance. 
+### 7. **Database and Repository**
+| **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
+|------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Database**     | - [Understanding how data is stored](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/database/index.html#database-storage) <br> - [Interactions with the provenance graph](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/database/index.html#interactions) | [Database Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/database/index.html) |
+| **Repository**   | - [Understanding how data is stored](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/repository/index.html#repository-storage) <br> - [Interactions with the provenance graph](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/repository/index.html#interactions) | [Repository Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/repository/index.html) |
 
-### 2. **SQL Language Basics**:
-   - **[Data Definition Language (DDL)](https://www.postgresql.org/docs/current/sql-createtable.html)**: Creating tables, indexes, views.
-   - **[Data Manipulation Language (DML)](https://www.postgresql.org/docs/current/sql-insert.html)**: Inserting, updating, deleting data.
-   - **[Queries](https://www.postgresql.org/docs/current/tutorial-join.html)**: Selecting and retrieving data.
+### 8. **Plugins**
+| **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
+|------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **General Understanding** | - [Developing and integrating plugins](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/plugins/index.html#plugin-development) <br> - [Extending AiiDA’s functionality](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/plugins/index.html#extending-functionality) | [Plugins Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/plugins/index.html) |
 
-### 3. **Database Design**:
-   - **[Indexes](https://www.postgresql.org/docs/current/indexes.html)**: Efficiently accessing data.
-   - **[Performance Optimization](https://www.postgresql.org/docs/current/performance-tips.html)**: Techniques to improve query speed.
 
-### 4. **Transactions and Concurrency**:
-   - **[Transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html)**: Ensuring reliable transactions.
-   - **[Concurrency Control](https://www.postgresql.org/docs/current/mvcc.html)**: Handling concurrent data access.
 
-### 5. **Backup and Restore**:
-   - **[Backup and Restore](https://www.postgresql.org/docs/current/backup.html)**: Essential for data recovery.
 
-### Python Basics (4 days)
-- **[Real Python](https://realpython.com/)**: A comprehensive resource for learning Python programming.
 
-#### 1. **Basic Syntax and Data Structures**
-   - **[Introduction to Python Syntax](https://docs.python.org/3/reference/lexical_analysis.html)**: Learn the fundamental syntax rules of Python.
-   - **[Data Types and Variables](https://realpython.com/python-data-types/)**: Explore different data types in Python and how to use variables.
-   - **[Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)**: Creating, accessing, and modifying lists, and understanding list comprehensions.
-   - **[Dictionaries](https://realpython.com/python-dicts/)**: Creating and using dictionaries in Python.
-   - **[Sets](https://realpython.com/python-sets/)**: Learn about sets and how to use them effectively.
-   - **[Tuples](https://realpython.com/python-tuples/)**: Understanding tuples and their usage.
+# PostgreSQL
 
-#### 2. **Control Structures**
-   - **[Conditional Statements](https://realpython.com/python-conditional-statements/)**: Using `if`, `elif`, and `else` for conditional logic.
-   - **[Loops](https://docs.python.org/3/tutorial/controlflow.html#for-statements)**: Understanding `for` and `while` loops in Python.
-   - **[Exception Handling](https://realpython.com/python-exceptions/)**: Using `try`, `except`, and `finally` to handle errors effectively.
+| **Heading**               | **Topics**                                                                                                                                                      | **Links**                                                                                      |
+|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **1. Installation and Configuration** | - [Installation from Binaries](https://www.postgresql.org/docs/current/installation.html): Setting up PostgreSQL. <br> - [Server Configuration](https://www.postgresql.org/docs/current/runtime-config.html): Configuring your server for optimal performance. | [Installation Guide](https://www.postgresql.org/docs/current/installation.html) <br> [Server Configuration](https://www.postgresql.org/docs/current/runtime-config.html) |
+| **2. SQL Language Basics** | - [Data Definition Language (DDL)](https://www.postgresql.org/docs/current/sql-createtable.html): Creating tables, indexes, views. <br> - [Data Manipulation Language (DML)](https://www.postgresql.org/docs/current/sql-insert.html): Inserting, updating, deleting data. <br> - [Queries](https://www.postgresql.org/docs/current/tutorial-join.html): Selecting and retrieving data. | [DDL](https://www.postgresql.org/docs/current/sql-createtable.html) <br> [DML](https://www.postgresql.org/docs/current/sql-insert.html) <br> [Queries](https://www.postgresql.org/docs/current/tutorial-join.html) |
+| **3. Database Design**    | - [Indexes](https://www.postgresql.org/docs/current/indexes.html): Efficiently accessing data. <br> - [Performance Optimization](https://www.postgresql.org/docs/current/performance-tips.html): Techniques to improve query speed. | [Indexes](https://www.postgresql.org/docs/current/indexes.html) <br> [Performance Optimization](https://www.postgresql.org/docs/current/performance-tips.html) |
+| **4. Transactions and Concurrency** | - [Transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html): Ensuring reliable transactions. <br> - [Concurrency Control](https://www.postgresql.org/docs/current/mvcc.html): Handling concurrent data access. | [Transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html) <br> [Concurrency Control](https://www.postgresql.org/docs/current/mvcc.html) |
+| **5. Backup and Restore** | - [Backup and Restore](https://www.postgresql.org/docs/current/backup.html): Essential for data recovery.                                                         | [Backup and Restore](https://www.postgresql.org/docs/current/backup.html) |
 
-#### 3. **Functions and Modules**
-   - **[Defining Functions](https://realpython.com/defining-your-own-python-function/)**: How to define and use functions in Python.
-   - **[Lambda Functions](https://realpython.com/python-lambda/)**: Introduction to lambda functions for concise function definitions.
-   - **[Modules and Packages](https://realpython.com/python-modules-packages/)**: Working with modules and packages in Python.
-   - **[Scopes and Namespaces](https://realpython.com/python-scope-legb-rule/)**: Understanding variable scopes and namespaces in Python.
+# Python
 
-#### 4. **Object-Oriented Programming (OOP)**
-   - **[Introduction to OOP](https://realpython.com/python3-object-oriented-programming/)**: Core principles of Object-Oriented Programming in Python.
-   - **[Classes and Objects](https://realpython.com/python-classes/)**: Creating and using classes and objects in Python.
-   - **[Inheritance](https://docs.python.org/3/tutorial/classes.html#inheritance)**: Using inheritance to extend classes in Python.
-   - **[Polymorphism](https://docs.python.org/3/glossary.html#term-polymorphism)**: Applying polymorphism in Python programming.
-   - **[Encapsulation and Access Modifiers](https://docs.python.org/3/tutorial/classes.html#private-variables)**: Implementing encapsulation and access control in Python classes.
+| **Python Basics (4 days)** | **Topics**                                                                                       |
+|----------------------------|--------------------------------------------------------------------------------------------------|
+| **Real Python**             | [Real Python](https://realpython.com/): A comprehensive resource for learning Python programming.|
+| **1. Basic Syntax and Data Structures** | [Introduction to Python Syntax](https://docs.python.org/3/reference/lexical_analysis.html) <br> [Data Types and Variables](https://realpython.com/python-data-types/) <br> [Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) <br> [Dictionaries](https://realpython.com/python-dicts/) <br> [Sets](https://realpython.com/python-sets/) <br> [Tuples](https://realpython.com/python-tuples/) |
+| **2. Control Structures** | [Conditional Statements](https://realpython.com/python-conditional-statements/) <br> [Loops](https://docs.python.org/3/tutorial/controlflow.html#for-statements) <br> [Exception Handling](https://realpython.com/python-exceptions/) |
+| **3. Functions and Modules** | [Defining Functions](https://realpython.com/defining-your-own-python-function/) <br> [Lambda Functions](https://realpython.com/python-lambda/) <br> [Modules and Packages](https://realpython.com/python-modules-packages/) <br> [Scopes and Namespaces](https://realpython.com/python-scope-legb-rule/) |
+| **4. Object-Oriented Programming (OOP)** | [Introduction to OOP](https://realpython.com/python3-object-oriented-programming/) <br> [Classes and Objects](https://realpython.com/python-classes/) <br> [Inheritance](https://docs.python.org/3/tutorial/classes.html#inheritance) <br> [Polymorphism](https://docs.python.org/3/glossary.html#term-polymorphism) <br> [Encapsulation and Access Modifiers](https://docs.python.org/3/tutorial/classes.html#private-variables) |
+| **5. Error Handling** | [Using `try-except` Blocks](https://realpython.com/python-exceptions/) <br> [Raising Exceptions](https://docs.python.org/3/tutorial/errors.html#raising-exceptions) <br> [Finally and Cleanup Actions](https://docs.python.org/3/tutorial/errors.html#defining-clean-up-actions) <br> [Best Practices for Error Handling](https://docs.python.org/3/tutorial/errors.html#handling-exceptions) |
 
-#### 5. **Error Handling**
-   - **[Using `try-except` Blocks](https://realpython.com/python-exceptions/)**: Handling errors with `try` and `except`.
-   - **[Raising Exceptions](https://docs.python.org/3/tutorial/errors.html#raising-exceptions)**: Manually raising exceptions in Python.
-   - **[Finally and Cleanup Actions](https://docs.python.org/3/tutorial/errors.html#defining-clean-up-actions)**: Using `finally` to ensure cleanup actions.
-   - **[Best Practices for Error Handling](https://docs.python.org/3/tutorial/errors.html#handling-exceptions)**: foundation for contributing to projects like AiiDA.
 
-## Scientific Computing
+# Scientific Computing
 
-I apologize for the confusion earlier. Here are updated, correctly working links to resources that will help you prepare for contributing to AiiDA using SciPy:
-
-### 1. **Basic SciPy Operations**
-   - **[Mathematical Functions](https://docs.python.org/3/library/math.html)**: Learn how to use SciPy's special mathematical functions.
-   - **[Linear Algebra](hhttps://www.geeksforgeeks.org/scipy-linear-algebra-scipy-linalg/)**: Understand matrix operations, decompositions, and linear algebra functions in SciPy.
-   - **[Integration](https://www.geeksforgeeks.org/scipy-integration/)**: Familiarize yourself with numerical integration methods in SciPy, including ODE solvers.
-   - **[Optimization](https://www.geeksforgeeks.org/optimization-in-scipy/)**: Study how to use SciPy’s optimization techniques, including minimization, curve fitting, and root finding.
-   - **[Interpolation](https://www.geeksforgeeks.org/scipy-interpolation/)**: Learn about different interpolation methods in SciPy and their applications to data.
-
-### 2. **Data Processing and Analysis**
-   - **[Signal Processing](https://docs.scipy.org/doc/scipy/tutorial/signal.html)**: Explore SciPy’s signal processing tools, such as filtering, Fourier transforms, and convolution operations.
-   - **[Statistical Analysis](https://www.geeksforgeeks.org/scipy-stats/)**: Understand SciPy’s statistical functions, including hypothesis testing, probability distributions, and statistical analysis.
-   - **[Handling Large Datasets](https://www.geeksforgeeks.org/handling-large-datasets-in-python/)**: Learn how to efficiently manipulate large datasets using SciPy along with NumPy.
-
-### 3. **Advanced SciPy Modules**
-   - **[Sparse Matrices](https://docs.scipy.org/doc/scipy/reference/sparse.html)**: Work with sparse matrices in SciPy and understand their applications in large-scale computations.
-   - **[Spatial Data Analysis](https://docs.scipy.org/doc/scipy/reference/spatial.html)**: Study how to handle spatial data, perform distance computations, and use KD-trees with SciPy’s spatial module.
-   - **[Image Processing](https://docs.scipy.org/doc/scipy/reference/ndimage.html)**: Learn about image processing techniques using SciPy’s ndimage module, including filtering and morphological operations.
-
-### 4. **Workflow Integration**
-   - **[Understanding Workflows](https://aiida.readthedocs.io/projects/aiida-core/en/latest/)**: Learn the concepts of scientific workflows and how to design them.
-   - **[Workflow Management Systems](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/workflows/)**: Get familiar with AiiDA’s workflow management, task scheduling, data provenance, and automation.
-   - **[Integration with AiiDA](https://aiida.readthedocs.io/projects/aiida-core/en/latest/)**: Understand how to integrate SciPy computations within AiiDA workflows, ensuring reproducibility and data provenance.
-
-### 5. **Practical Applications and Case Studies**
-   - **[Practical Examples](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/index.html)**: Work on real-world examples where SciPy and AiiDA are used together, such as setting up simulations or optimizing scientific experiments.
-   - **[AiiDA Plugins](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/plugins.html)**: Learn how to write and use AiiDA plugins that require SciPy for their calculations.
-
-### 6. **Documentation and Best Practices**
-   - **[SciPy Documentation](https://docs.scipy.org/doc/scipy/)**: Get familiar with the official SciPy documentation for quick reference on functions and their usage.
-   - **[AiiDA Contribution Guidelines](https://aiida.readthedocs.io/projects/aiida-core/en/latest/contributing/index.html)**: Study AiiDA’s contribution guidelines and documentation to ensure your work aligns with the project’s standards.
-
-These links should now correctly direct you to the resources you need.
+| **Heading**                          | **Topics**                                                                                                                                                                                                                                                                 | **Links**                                                                                                                                         |
+|--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| **1. Basic SciPy Operations**        | - [Mathematical Functions](https://docs.python.org/3/library/math.html): Learn how to use SciPy's special mathematical functions. <br> - [Linear Algebra](https://www.geeksforgeeks.org/scipy-linear-algebra-scipy-linalg/): Understand matrix operations, decompositions, and linear algebra functions in SciPy. <br> - [Integration](https://www.geeksforgeeks.org/scipy-integration/): Familiarize yourself with numerical integration methods in SciPy, including ODE solvers. <br> - [Optimization](https://www.geeksforgeeks.org/optimization-in-scipy/): Study how to use SciPy’s optimization techniques, including minimization, curve fitting, and root finding. <br> - [Interpolation](https://www.geeksforgeeks.org/scipy-interpolation/): Learn about different interpolation methods in SciPy and their applications to data. | [Mathematical Functions](https://docs.python.org/3/library/math.html) <br> [Linear Algebra](https://www.geeksforgeeks.org/scipy-linear-algebra-scipy-linalg/) <br> [Integration](https://www.geeksforgeeks.org/scipy-integration/) <br> [Optimization](https://www.geeksforgeeks.org/optimization-in-scipy/) <br> [Interpolation](https://www.geeksforgeeks.org/scipy-interpolation/) |
+| **2. Data Processing and Analysis**  | - [Signal Processing](https://docs.scipy.org/doc/scipy/tutorial/signal.html): Explore SciPy’s signal processing tools, such as filtering, Fourier transforms, and convolution operations. <br> - [Statistical Analysis](https://www.geeksforgeeks.org/scipy-stats/): Understand SciPy’s statistical functions, including hypothesis testing, probability distributions, and statistical analysis. <br> - [Handling Large Datasets](https://www.geeksforgeeks.org/handling-large-datasets-in-python/): Learn how to efficiently manipulate large datasets using SciPy along with NumPy. | [Signal Processing](https://docs.scipy.org/doc/scipy/tutorial/signal.html) <br> [Statistical Analysis](https://www.geeksforgeeks.org/scipy-stats/) <br> [Handling Large Datasets](https://www.geeksforgeeks.org/handling-large-datasets-in-python/) |
+| **3. Advanced SciPy Modules**        | - [Sparse Matrices](https://docs.scipy.org/doc/scipy/reference/sparse.html): Work with sparse matrices in SciPy and understand their applications in large-scale computations. <br> - [Spatial Data Analysis](https://docs.scipy.org/doc/scipy/reference/spatial.html): Study how to handle spatial data, perform distance computations, and use KD-trees with SciPy’s spatial module. <br> - [Image Processing](https://docs.scipy.org/doc/scipy/reference/ndimage.html): Learn about image processing techniques using SciPy’s ndimage module, including filtering and morphological operations. | [Sparse Matrices](https://docs.scipy.org/doc/scipy/reference/sparse.html) <br> [Spatial Data Analysis](https://docs.scipy.org/doc/scipy/reference/spatial.html) <br> [Image Processing](https://docs.scipy.org/doc/scipy/reference/ndimage.html) |
+| **4. Workflow Integration**          | - [Understanding Workflows](https://aiida.readthedocs.io/projects/aiida-core/en/latest/): Learn the concepts of scientific workflows and how to design them. <br> - [Workflow Management Systems](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/workflows/): Get familiar with AiiDA’s workflow management, task scheduling, data provenance, and automation. <br> - [Integration with AiiDA](https://aiida.readthedocs.io/projects/aiida-core/en/latest/): Understand how to integrate SciPy computations within AiiDA workflows, ensuring reproducibility and data provenance. | [Understanding Workflows](https://aiida.readthedocs.io/projects/aiida-core/en/latest/) <br> [Workflow Management Systems](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/workflows/) <br> [Integration with AiiDA](https://aiida.readthedocs.io/projects/aiida-core/en/latest/) |
+| **5. Practical Applications and Case Studies** | - [Practical Examples](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/index.html): Work on real-world examples where SciPy and AiiDA are used together, such as setting up simulations or optimizing scientific experiments. <br> - [AiiDA Plugins](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/plugins.html): Learn how to write and use AiiDA plugins that require SciPy for their calculations. | [Practical Examples](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/index.html) <br> [AiiDA Plugins](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/plugins.html) |
+| **6. Documentation and Best Practices** | - [SciPy Documentation](https://docs.scipy.org/doc/scipy/): Get familiar with the official SciPy documentation for quick reference on functions and their usage. <br> - [AiiDA Contribution Guidelines](https://aiida.readthedocs.io/projects/aiida-core/en/latest/contributing/index.html): Study AiiDA’s contribution guidelines and documentation to ensure your work aligns with the project’s standards. | [SciPy Documentation](https://docs.scipy.org/doc/scipy/) <br> [AiiDA Contribution Guidelines](https://aiida.readthedocs.io/projects/aiida-core/en/latest/contributing/index.html) |
 
 
 ## Version Control
