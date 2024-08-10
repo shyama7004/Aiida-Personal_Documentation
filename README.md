@@ -3,8 +3,13 @@
 ## AiiDA-Specific Knowledge
 
 Here's a table with essential topics to focus on, including links to the official AiiDA documentation:
+### 1. **Command line interface**
+| **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
+|------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| **Concepts**     | - [Command line interface](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/cli.html)  | [Command line interface](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/cli.html) |
 
-### 1. **Processes**
+
+### 2. **Processes**
 | **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
 |------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **Concepts**     | - [Introduction](https://aiida.readthedocs.io/projects/aiida-core/en/latest/intro/index.html)<br>- [Quick Installation](https://aiida.readthedocs.io/projects/aiida-core/en/latest/installation/guide_quick.html)<br> - [Complete Installation](https://aiida.readthedocs.io/projects/aiida-core/en/latest/installation/guide_complete.html)<br>- [Docker](https://aiida.readthedocs.io/projects/aiida-core/en/latest/installation/docker.html)<br>- [Troubleshooting](https://aiida.readthedocs.io/projects/aiida-core/en/latest/installation/troubleshooting.html)<br> - [Basic Tutorial](https://aiida.readthedocs.io/projects/aiida-core/en/latest/tutorials/basic.html#tutorial-basic)<br>- [Process types](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/concepts.html#types) <br> - [Process state](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/concepts.html#states) <br> - [Process exit codes](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/concepts.html#exit-codes) <br> - [Process lifetime](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/concepts.html#lifetime) | [Processes Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/index.html) |
@@ -12,42 +17,42 @@ Here's a table with essential topics to focus on, including links to the officia
 | **Process Functions** | - [Function signatures](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html#function-signatures) <br> - [Type validation](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html#type-validation) <br> - [Docstring parsing](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html#docstring-parsing) <br> - [Return values](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html#return-values) <br> - [Exit codes](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html#exit-codes) | [Process Functions](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/processes/process_functions.html) |
 | **Provenance**   | - General understanding of provenance                                                                          | [Provenance Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/index.html) |
 
-### 2. **Calculations**
+### 3. **Calculations**
 | **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
 |------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **Concepts**     | - [Calculation functions](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/concepts.html#calculation-functions) <br> - [Calculation jobs](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/concepts.html#calculation-jobs) | [Calculations Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/index.html) |
 | **Usage**        | - [Practical experience with calculation functions](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/usage.html#calculation-functions) <br> - [Practical experience with calculation jobs](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/usage.html#calculation-jobs) | [Calculations Usage](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/calculations/usage.html) |
 
-### 3. **Workflows**
+### 4. **Workflows**
 | **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
 |------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **Concepts**     | - [Work functions](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/workflows/concepts.html#work-functions) <br> - [Work chains](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/workflows/concepts.html#work-chains) | [Workflows Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/workflows/index.html) |
 | **Usage**        | - [Creating and managing workflows](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/workflows/usage.html) | [Workflows Usage](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/workflows/usage.html) |
 
-### 4. **Provenance**
+### 5. **Provenance**
 | **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
 |------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **Concepts**     | - [Nodes and links](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/concepts.html#nodes-and-links) <br> - [Data provenance and logical provenance](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/concepts.html#data-provenance-and-logical-provenance) | [Provenance Concepts](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/concepts.html) |
 | **Implementation** | - [Graph nodes](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/implementation.html#graph-nodes) <br> - [Graph links](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/implementation.html#graph-links) | [Provenance Implementation](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/implementation.html) |
 | **Consistency**  | - [Traversal rules](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/consistency.html#traversal-rules) <br> - [Caching and hashing](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/consistency.html#caching-and-hashing) | [Provenance Consistency](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/provenance/consistency.html) |
 
-### 5. **Daemon**
+### 6. **Daemon**
 | **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
 |------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **General Understanding** | - [Managing background tasks](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/daemon/index.html#managing-background-tasks) <br> - [Running calculations](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/daemon/index.html#running-calculations) | [Daemon Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/daemon/index.html) |
 
-### 6. **Data Types**
+### 7. **Data Types**
 | **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
 |------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **General Understanding** | - [Different data types in AiiDA](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/data_types/index.html) <br> - [Handling and manipulating data](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/data_types/usage.html) | [Data Types Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/data_types/index.html) |
 
-### 7. **Database and Repository**
+### 8. **Database and Repository**
 | **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
 |------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **Database**     | - [Understanding how data is stored](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/database/index.html#database-storage) <br> - [Interactions with the provenance graph](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/database/index.html#interactions) | [Database Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/database/index.html) |
 | **Repository**   | - [Understanding how data is stored](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/repository/index.html#repository-storage) <br> - [Interactions with the provenance graph](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/repository/index.html#interactions) | [Repository Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/repository/index.html) |
 
-### 8. **Plugins**
+### 9. **Plugins**
 | **Heading**      | **Topics**                                                                                                    | **Links**                                                                                     |
 |------------------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | **General Understanding** | - [Developing and integrating plugins](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/plugins/index.html#plugin-development) <br> - [Extending AiiDA’s functionality](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/plugins/index.html#extending-functionality) | [Plugins Overview](https://aiida.readthedocs.io/projects/aiida-core/en/latest/topics/plugins/index.html) |
