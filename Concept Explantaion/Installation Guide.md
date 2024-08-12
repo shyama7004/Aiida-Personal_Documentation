@@ -72,19 +72,143 @@ pip install aiida-core[atomic_tools,docs]
 ## RabbitMQ
 RabbitMQ is an optional but recommended service for AiiDA. It is a message broker that is required to run AiiDA’s daemon. The daemon is a system process that runs in the background and manages one or multiple daemon workers that can run AiiDA processes. This way, the daemon helps AiiDA to scale, as it is possible to run many processes in parallel on the daemon workers instead of blockingly in a single Python interpreter. To facilitate communication with the daemon workers, RabbitMQ is required.
 
+In AiiDA, a `daemon` is a background process that manages new processes, such as calculations and workflows. 
+
 Although it is possible to run AiiDA without a daemon, it does provide significant benefits and therefore it is recommended to install RabbitMQ.
 
-To install RabbitMQ:
+# Installation Guide
 
-```bash
-rabbitmq-server -detached
-```
+## Menu
+- [Conda](#conda)
+  - [Ubuntu](#ubuntu)
+  - [macOS X](#macos-x)
+  - [Windows](#windows)
+  - [Other](#other)
 
-To stop RabbitMQ:
+---
 
-```bash
-rabbitmqctl stop
-```
+## Conda
+
+### Ubuntu
+
+<details>
+<summary>Click to expand</summary>
+
+1. Install [Conda](https://docs.conda.io/en/latest/miniconda.html).
+
+2. Create an environment and install `aiida-core.services`:
+
+    ```bash
+    conda create -n aiida -c conda-forge aiida-core.services
+    ```
+
+> **Important**  
+> The `aiida-core.services` package ensures that RabbitMQ is installed in the conda environment. However, it is not a service, in the sense that it is not automatically started, but has to be started manually.
+>
+> Start RabbitMQ server:
+> 
+> ```bash
+> rabbitmq-server --detached
+> ```
+>
+> Note that this has to be done each time after the machine has been rebooted. The server can be stopped with:
+> 
+> ```bash
+> rabbitmqctl stop
+> ```
+
+</details>
+
+### macOS X
+
+<details>
+<summary>Click to expand</summary>
+
+1. Install [Conda](https://docs.conda.io/en/latest/miniconda.html).
+
+2. Create an environment and install `aiida-core.services`:
+
+    ```bash
+    conda create -n aiida -c conda-forge aiida-core.services
+    ```
+
+> **Important**  
+> The `aiida-core.services` package ensures that RabbitMQ is installed in the conda environment. However, it is not a service, in the sense that it is not automatically started, but has to be started manually.
+>
+> Start RabbitMQ server:
+> 
+> ```bash
+> rabbitmq-server --detached
+> ```
+>
+> Note that this has to be done each time after the machine has been rebooted. The server can be stopped with:
+> 
+> ```bash
+> rabbitmqctl stop
+> ```
+
+</details>
+
+### Windows
+
+<details>
+<summary>Click to expand</summary>
+
+1. Install [Conda](https://docs.conda.io/en/latest/miniconda.html).
+
+2. Create an environment and install `aiida-core.services`:
+
+    ```bash
+    conda create -n aiida -c conda-forge aiida-core.services
+    ```
+
+> **Important**  
+> The `aiida-core.services` package ensures that RabbitMQ is installed in the conda environment. However, it is not a service, in the sense that it is not automatically started, but has to be started manually.
+>
+> Start RabbitMQ server:
+> 
+> ```bash
+> rabbitmq-server --detached
+> ```
+>
+> Note that this has to be done each time after the machine has been rebooted. The server can be stopped with:
+> 
+> ```bash
+> rabbitmqctl stop
+> ```
+
+</details>
+
+### Other
+
+<details>
+<summary>Click to expand</summary>
+
+1. Install [Conda](https://docs.conda.io/en/latest/miniconda.html).
+
+2. Create an environment and install `aiida-core.services`:
+
+    ```bash
+    conda create -n aiida -c conda-forge aiida-core.services
+    ```
+
+> **Important**  
+> The `aiida-core.services` package ensures that RabbitMQ is installed in the conda environment. However, it is not a service, in the sense that it is not automatically started, but has to be started manually.
+>
+> Start RabbitMQ server:
+> 
+> ```bash
+> rabbitmq-server --detached
+> ```
+>
+> Note that this has to be done each time after the machine has been rebooted. The server can be stopped with:
+> 
+> ```bash
+> rabbitmqctl stop
+> ```
+
+</details>
+
 
 ## Create a Profile
 
@@ -153,6 +277,8 @@ The options specific to the `core.sqlite_dos` storage plugin are:
 > ```
 >
 > The `verdi presto` command also automatically tries to configure RabbitMQ as the broker if it is running locally. Therefore, if the command succeeds in connecting to both PostgreSQL and RabbitMQ, `verdi presto --use-postgres` provides a fully automated way to create a profile suitable for production workloads.
+
+`Disk-objectstore` is a key-value store that writes files directly to disk and doesn't require a running server.
 
 This storage plugin uses PostgreSQL and the disk-objectstore to store data. The disk-objectstore is a Python package that is automatically installed as a dependency when installing `aiida-core`, which was covered in the Python package installation section. The storage plugin can connect to a PostgreSQL instance running on the localhost or on a server that can be reached over the internet. Instructions for installing PostgreSQL are beyond the scope of this guide.
 
