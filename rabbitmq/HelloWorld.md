@@ -103,9 +103,10 @@ Before exiting the program, we need to make sure the network buffers were flushe
 connection.close()
 ```
 
-### Sending Doesn't Work!
 
-If this is your first time using RabbitMQ and you don't see the "Sent" message, then you may be left scratching your head, wondering what could be wrong. Maybe the broker was started without enough free disk space (by default, it needs at least 50 MB free) and is therefore refusing to accept messages. Check the broker log file to see if there is a resource alarm logged and reduce the free disk space threshold if necessary. The Configuration guide will show you how to set `disk_free_limit`.
+> <h3>Sending Doesn't Work!</h3>
+
+> If this is your first time using RabbitMQ and you don't see the "Sent" message, then you may be left scratching your head, wondering what could be wrong. Maybe the broker was started without enough free disk space (by default, it needs at least 50 MB free) and is therefore refusing to accept messages. Check the broker log file to see if there is a resource alarm logged and reduce the free disk space threshold if necessary. The Configuration guide will show you how to set `disk_free_limit`.
 
 ---
 
@@ -123,6 +124,8 @@ channel.queue_declare(queue='hello')
 
 You may ask why we declare the queue again—we have already declared it in our previous code. We could avoid that if we were sure that the queue already exists. For example, if the `send.py` program was run before. But we're not yet sure which program to run first. In such cases, it's a good practice to repeat declaring the queue in both programs.
 
+-----
+
 #### Listing Queues
 
 You may wish to see what queues RabbitMQ has and how many messages are in them. You can do it (as a privileged user) using the `rabbitmqctl` tool:
@@ -136,6 +139,8 @@ On Windows, omit the `sudo`:
 ```bash
 rabbitmqctl.bat list_queues
 ```
+
+---
 
 Receiving messages from the queue is more complex. It works by subscribing a callback function to a queue. Whenever we receive a message, this callback function is called by the Pika library. In our case, this function will print on the screen the contents of the message.
 
@@ -224,6 +229,90 @@ if __name__ == '__main__':
         except SystemExit:
             os._exit(0)
 ```
+## Explanation
+
+This script is a Python program that connects to a RabbitMQ server, listens for messages on a specific queue, and prints any received messages to the console. Here's a breakdown of the code:
+
+### 1. **Shebang Line**
+   ```python
+   #!/usr/bin/env python
+   ```
+   - This is a shebang line that tells the operating system to use the Python interpreter to run the script. It makes the script executable directly from the command line on Unix-like systems.
+
+### 2. **Imports**
+   ```python
+   import pika, sys, os
+   ```
+   - `pika`: This is the Python client library used to interact with RabbitMQ.
+   - `sys` and `os`: These modules are used to handle system-specific functions like exiting the program.
+
+### 3. **Main Function**
+   ```python
+   def main():
+   ```
+   - The `main()` function encapsulates the main logic of the program, making it easier to manage and handle exceptions.
+
+### 4. **Connecting to RabbitMQ**
+   ```python
+   connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
+   channel = connection.channel()
+   ```
+   - `pika.BlockingConnection`: Establishes a connection to the RabbitMQ server running on `localhost`. 
+   - `channel = connection.channel()`: Creates a communication channel with the server. Channels are virtual connections within a physical connection to the server, and they're used to send and receive messages.
+
+### 5. **Queue Declaration**
+   ```python
+   channel.queue_declare(queue='hello')
+   ```
+   - Declares a queue named `'hello'`. If the queue doesn't already exist, it will be created. If it does exist, nothing happens (idempotent operation). This queue is where messages will be received.
+
+### 6. **Callback Function**
+   ```python
+   def callback(ch, method, properties, body):
+       print(f" [x] Received {body}")
+   ```
+   - The `callback` function is triggered whenever a message is received from the queue. It takes four arguments:
+     - `ch`: The channel through which the message was received.
+     - `method`: Delivery information about the message.
+     - `properties`: Message properties (like headers).
+     - `body`: The actual content of the message.
+   - The function prints the received message's content (`body`) to the console.
+
+### 7. **Consuming Messages**
+   ```python
+   channel.basic_consume(queue='hello', on_message_callback=callback, auto_ack=True)
+   ```
+   - `channel.basic_consume`: This method tells RabbitMQ that this particular `callback` function should be used to handle messages from the `'hello'` queue.
+   - `auto_ack=True`: This automatically acknowledges the receipt of a message, telling RabbitMQ that it can remove the message from the queue. If set to `False`, the message would remain in the queue until manually acknowledged.
+
+### 8. **Starting the Consumer Loop**
+   ```python
+   print(' [*] Waiting for messages. To exit press CTRL+C')
+   channel.start_consuming()
+   ```
+   - `channel.start_consuming()`: Starts a loop that waits for messages to arrive in the `'hello'` queue and calls the `callback` function when a message is received. The loop runs indefinitely until the program is interrupted (e.g., with `Ctrl+C`).
+
+### 9. **Script Execution and Graceful Shutdown**
+   ```python
+   if __name__ == '__main__':
+       try:
+           main()
+       except KeyboardInterrupt:
+           print('Interrupted')
+           try:
+               sys.exit(0)
+           except SystemExit:
+               os._exit(0)
+   ```
+   - `if __name__ == '__main__':`: This ensures that the `main()` function is only called if the script is run directly (not imported as a module).
+   - `try` and `except KeyboardInterrupt`: This block handles the case where the user interrupts the program using `Ctrl+C`. 
+     - `sys.exit(0)`: Gracefully exits the program.
+     - `os._exit(0)`: Ensures the program exits without raising further exceptions, even if `sys.exit(0)` fails.
+
+### Summary
+This script is designed to continuously listen for messages on a RabbitMQ queue named `'hello'`. When a message is received, it prints the message to the console. The script will run indefinitely until manually stopped by the user.
+
+More explanation abot the last code snippet: [if __name__ == '__main__'](https://github.com/shyama7004/Aiida-Personal_Documentation/blob/main/Concept%20Explantaion/code-1.md)
 
 Now we can try out our programs in a terminal. First, let's start a consumer, which will run continuously waiting for deliveries:
 
@@ -255,4 +344,4 @@ Try to run `send.py` again in a new terminal.
 We've learned how to send and receive a message from a named queue. It's time to move on to [part 2](https://www.rabbitmq.com/tutorials/tutorial-two-python.html) and build a simple work queue.
 ```
 
-This Markdown file includes code snippets, explanations, and step-by-step instructions to guide the reader through the RabbitMQ "Hello World!" tutorial.
+This markdown was created by shyama7004, you can search him on github :).
