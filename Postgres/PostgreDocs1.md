@@ -22,6 +22,12 @@ PostgreSQL is more useful than Excel for these key reasons:
 
 While Excel is great for simple, manual data tasks, PostgreSQL is better for large-scale, reliable, and automated data management.
 
+### Organised Data
+![Image-1](https://github.com/shyama7004/Aiida-Personal_Documentation/blob/main/Postgres/Images/7.jpg)
+
+Organised data is always easy to access.
+
+
 ## Database vs DBMS
 
 **DBMS (Database Management System)** is software that manages databases, allowing users to create, read, update, and delete data. 
