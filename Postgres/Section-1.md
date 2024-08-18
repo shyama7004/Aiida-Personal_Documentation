@@ -1,4 +1,4 @@
-# section 1
+# Section 1
 - What is database?
 - Database vs DBMS
 - DBMS vs RDBMS
